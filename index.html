@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0"/>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Resume Generator</title>
+    <body>
+   
+       <div class="container" id="resume">
+         <h1 class="text-center my-2"> Resume Generator</h1>
+         <p class="text-center"><b>By Rakti Singal</b></p>
+
+          <div class="row">
+
+          <div class="col-md-6">
+
+         <div class="form-group">
+         <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+<br>
+
+           <div class="form-group">
+           <label for="phoneno">Phone Number</label>
+        <input type="text" class="form-control" id="phoneno" placeholder="Enter your phone number">
+        </div>
+<br>
+           <div class="form-group">
+        <label for="email">Email</label>
+         <input type="text" class="form-control" id="email" placeholder="Enter your email">
+         </div>
+<br>
+           <div class="form-group">
+               <label for="linkedin">LinkedIn</label>
+               <input type="text" class="form-control" id="linkedin" placeholder="Enter link to Linkedin profile">
+           </div>
+<br>
+            <div class="form-group">
+            <label for="github">Github</label>
+            <input type="text" class="form-control" id="github" placeholder="Enter link to Github profile">
+           </div>  
+<br>
+             <div class="form-group">
+                 <label>Select your photograph</label>
+                 <input type="file" class="form-control" id="image">
+             </div>
+             <br>
+                     <div class="form-group" id="a">
+                    <label for="achi">Achievments and Certifications</label>
+    <textarea class="form-control achiii" id="achi" placeholder="Enter certifications and achievments" rows="2"></textarea>
+    <div class="container text-center my-2" id="ach">
+        <button onclick="addAchi()"class="btn btn-primary btn-sm">Add</button>
+    </div>
+   </div>         
+</div>
+
+<div class="col-md-6">
+
+           <div class="form-group">
+           <label for="myprofile">My Profile</label>
+           <textarea class="form-control" id="myprofile" placeholder="Enter profile summary" rows="2"></textarea>
+            </div>
+<br>
+                 <div class="form-group" id="e">
+                     <label for="education">Education</label>
+                     <textarea class="form-control edu" id="education" placeholder="Enter most recent to least recent" rows="2"></textarea>
+                     <div class="container text-center my-2" id="edu">
+                         <button onclick="addEdu()"class="btn btn-primary btn-sm">Add</button>
+                     </div>
+                    </div>
+                    <br>
+                            <div class="form-group" id="w">
+                             <label for="work">Work Experience</label>
+                           <textarea class="form-control work" id="worka" placeholder="Enter most recent to least recent" rows="2"></textarea>
+                             <div class="container text-center my-2" id="wor">
+                             <button onclick="addWork()"class="btn btn-primary btn-sm">Add</button>
+                           </div>
+                          </div>
+                          <br>
+                          <div class="form-group"id="pr">
+                          <label for="project">Projects</label>
+                          <textarea class="form-control project" id="project" placeholder="Enter your projects" rows="2"></textarea>
+                           <div class="container text-center my-2" id="pro">
+                            <button onclick="addProject()"class="btn btn-primary btn-sm">Add</button>
+                           </div>
+                           </div>
+</div>
+</div>
+
+    <div class="container text-center my-3">
+        <button onclick="generate()" class="btn btn-primary btn-lg">Generate Resume</button>
+    </div>
+</div>
+
+
+
+     <!-----CV TEMPLATE----->
+
+
+<div class="container" id="cv-template">
+
+    <div class="row">
+             <div class="col-md-4 divcol">
+                   
+<img src="https://previews.123rf.com/images/tanyadanuta/tanyadanuta1910/tanyadanuta191000004/148019276-default-avatar-profile-icon-gray-photo-placeholder-hand-drawn-modern-woman-avatar-profile-icon-or-po.jpg" 
+class="img-fluid im text-center" id="imageT"
+>
+
+           <div class="container" id="change">
+               <h2 class="text-center" id="nameT"></h2>
+              <p><b>Phone Number :</b><p id="phonenoT"></p></p>
+              <p><b>Email Id :</b><p id="emailT"></p></p>
+              <p><b>LinkedIn :</b><p id="linkedinT"></p></p>
+               <p><b>Github :</b><p id="githubT"></p></p>
+           </div>
+              <hr>
+        <div class="container">
+              <p><b>Achievments and Certifications :</b> </p>
+              <ul id="achiT">
+                 <li></li>
+              </ul>
+              </div>
+             </div>
+
+             <div class="col-md-8 divcol2">
+                
+                      <div class="card ">
+                          <div class="card-header head"><h3>My Profile</h3></div>
+                          <div class="card-body">
+                              <p id="myprofileT"></p>
+                          </div>
+                      </div>
+
+                      <div class="card mt-3">
+                        <div class="card-header head"><h3>Education</h3></div>
+                        <div class="card-body">
+                           <ul id="eduT">
+                               <li>hi</li>
+                           </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header head"><h3>Work Experience</h3></div>
+                        <div class="card-body">
+                           <ul id="workT">
+                               <li>hhh</li>
+                           </ul>
+                        </div>
+                    </div>
+ 
+                    <div class="card mt-3">
+                        <div class="card-header head"><h3>Projects</h3></div>
+                        <div class="card-body">
+                            <ul id="proT">
+                                <li>hjkjhg</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+             </div>
+
+    </div>
+   
+    <div class="container mt-4 text-center">
+        <button onclick="printResume()" class="btn btn-success">Print Resume</button>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+        <script src="index.js"></script>
+    </body>
+</head>
+</html>
