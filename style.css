@@ -1,0 +1,31 @@
+.im
+{
+    
+    border-radius:50%;
+    width:200px;
+   
+}
+.divcol
+{
+   background-color:#dcdcdc; 
+}
+.head
+{
+    background-color:rgb(175, 58, 82);
+    color:white;
+}
+#cv-template
+{
+    display:none;
+    font-size:12px;
+}
+#resume
+{
+    display:block;
+    background-color:white;
+}
+body
+{
+    background-color:black;
+}
+
