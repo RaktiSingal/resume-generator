@@ -1,4 +1,9 @@
 # resume-generator
 Project that takes user details to make a resume.
 
-<img src="imgs/Demo.jpg" width="550" height="400">
+## Model Demo: 
+
+<img src="imgs/Demo.jpg" width="100%">
+
+
+Live Preview: <a href="https://raktisingal.github.io/resume-generator/">here</a> 
